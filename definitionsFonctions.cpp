@@ -92,3 +92,16 @@ int somMul11(int a, int b)
 {
 	return(!(existeMul11(a, b))? 0 : ((b%11==0))? (b + somMul11(a, (b-1))) : somMul11(a, (b-1)));
 }
+
+// Il manque les exercices 3. a) b) c) d) e)
+
+bool existeRac(int n, int k)
+{
+	return(sqrt(n)>=k ? true : false);
+}
+
+
+bool estCarre(int n)
+{
+	return(floor(sqrt(n))==sqrt(n) ? true : false);
+}

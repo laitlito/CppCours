@@ -11,7 +11,7 @@ int main()
   cout << "\n=================================================================\n ";
 
   // Expressions à évaluer
-  cout << "\n==== Prise en main =======\n";
+  // cout << "\n==== Prise en main =======\n";
   // commande pour évaluer l'expression 3+4
   EVAL( 3+4 );
   EVAL( true || false );
@@ -37,6 +37,7 @@ int main()
   EVAL(2>3 ? 5 : 7);
   EVAL(sqrt(2)>1.4 ? 5 : 7);
   EVAL(moyenne(2.3 , 8));
+  cout << "\n=================================================================\n ";
   EVAL(max3(19 , 2 , 100000000000000));
   EVAL(multiple(2, 0));
   EVAL(triangleEqui(3, 3, 3));
@@ -61,6 +62,28 @@ int main()
   EVAL(nbMul11(3, 4));
   EVAL(somMul11(3, 54));
   EVAL(somMul11(3, 4));
+  const list<int> exli={1,33,67,12,1,22};
+  EVAL(existeRac(16, 2));
+  EVAL(estCarre(64));
+  EVAL(estCarre(132));
+  cout << "\n=================================================================\n ";
+  EVAL(exli);
+  EVAL(tete(exli));
+  EVAL(queue(exli));
+  EVAL(tete(queue(exli)));
+  //EVAL(tete(tete(exli));
+  EVAL(queue(queue(exli)));
+  EVAL(cons(11,liVide<int>()));
+  EVAL(cons(11, exli));
+  //EVAL(cons(1.1, exli));
+  EVAL((tete(exli)+tete(queue(exli))));
+  EVAL(cons(34, queue(queue(exli))));
+  EVAL(cons(tete(exli), queue(queue(exli))));
+  EVAL(liste({1, 2, 3}));
+    cout << "\n=================================================================\n ";
+  
+
+
 
 
 
