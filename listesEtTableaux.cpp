@@ -22,10 +22,10 @@ template<typename T> bool estVide(list<T> l)
     return l.empty();
 }
 
-template<typename T> T tete(list<T> l)
+template<typename T> T tete(list<T> li)
 {
-    assert( !estVide(l));
-    return *(l.begin());
+    assert(!estVide(li));
+    return *(li.begin());
 }
 
 template<typename T> list<T> queue(list<T> l)
@@ -120,6 +120,3 @@ void ecrPoly(vector<int> po)
     cout<< endl;
     return ;
 }
-
-
-

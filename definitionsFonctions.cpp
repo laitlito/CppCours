@@ -1,7 +1,9 @@
 	// Fichier dans lequel vous écrirez les fonctions que l'on vous demandera de définir
 
 #include "listesEtTableaux.cpp"
-
+#include <iostream>
+#include <cmath>
+using namespace std;
 // Fonction moyenne
 // Données: a : nombre, b : nombre
 // Résultat: Nombre, la moyenne de a et b
@@ -95,13 +97,88 @@ int somMul11(int a, int b)
 
 // Il manque les exercices 3. a) b) c) d) e)
 
-bool existeRac(int n, int k)
+/*bool existeRac(int n, int k)
 {
 	return(sqrt(n)>=k ? true : false);
 }
+*/
 
+int nbChifDec(int n)
+{
+	return(n<10? 1 : 1+nbChifDec(n/10));
+}
+
+int chifRang(int n, int k)
+{
+	return(k==1 ? n%10 : n<10 ? 0 : chifRang(n/10, k-1));
+}
+
+
+int somChif(int n)
+{
+	return(n<10? n : n%10+somChif(n/10));
+}
+
+int racNum(int n)
+{
+	return(n<10? n : racNum(somChif(n)));
+}
+
+int invChif(int n)
+{
+	return(n< 10? n : invChif(n/10)+(n%10) * pow(10, nbChifDec(n/10)));
+}
 
 bool estCarre(int n)
 {
 	return(floor(sqrt(n))==sqrt(n) ? true : false);
+}
+
+//============================================================================================================================================================
+
+list<int> li(list<int> li)
+{
+	return((li));
+}
+
+int longLi(list<int> li)
+{
+	return(estVide(li)? 0 : !estVide(queue(li))? 1+longLi(queue(li)) : 1);
+}
+
+int minLi(list<int> li)
+{
+	return(estVide(li)? 0 : estVide(queue(li))? tete(li) : tete(li)<=tete(queue(li))? minLi(cons(tete(li), queue(queue(li)))) : minLi(cons(tete(queue(li)), queue(queue(li)))));
+}
+
+bool existeLi(list<int> li, int n)
+{
+	return(estVide(li)? 0 : n==tete(li)? true : existeLi(queue(li), n));
+}
+
+list<int> oterLi(list<int> Li, int n)
+{
+  return((!(existeLi(Li,n))) ? Li : (tete(Li)==n ? queue(Li) : cons(tete(Li),oterLi(queue(Li),n))));
+}
+
+bool estTriee(list<int> li)
+{
+	return(estVide(queue(li))? true : tete(li)<= tete(queue(li))? estTriee(queue(li)) : false);
+}
+
+list<int> triListe(list<int> Li)
+{
+  return(estVide(queue(Li))? Li : (estTriee(Li) ? Li : cons((minLi(Li)),triListe(oterLi(Li,minLi(Li))))));
+}
+
+int lgPrefEg (list<int> li)
+{
+	return(estVide(queue(li))? 1 : (tete(li)==tete(queue(li)))? 1+lgPrefEg(queue(li)) : 1);
+}
+
+
+//traite que 2 par 2
+bool existeRepet(list<int> li)
+{
+	return(estVide(queue(li))? false : tete(li)==tete(queue(li))? true : existeRepet(queue(li)));
 }

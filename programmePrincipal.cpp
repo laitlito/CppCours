@@ -62,11 +62,18 @@ int main()
   EVAL(nbMul11(3, 4));
   EVAL(somMul11(3, 54));
   EVAL(somMul11(3, 4));
-  const list<int> exli={1,33,67,12,1,22};
-  EVAL(existeRac(16, 2));
+  EVAL(nbChifDec(4));
+  EVAL(nbChifDec(3249));
+  EVAL(chifRang(34682, 4));
+  EVAL(somChif(238787284));
+  EVAL(racNum(1345));
+  EVAL(racNum(13714728));
+  EVAL(invChif(1135784));
+  //EVAL(existeRac(16, 2));
   EVAL(estCarre(64));
   EVAL(estCarre(132));
   cout << "\n=================================================================\n ";
+  const list<int> exli={1,33,67,12,1,22};
   EVAL(exli);
   EVAL(tete(exli));
   EVAL(queue(exli));
@@ -81,10 +88,31 @@ int main()
   EVAL(cons(tete(exli), queue(queue(exli))));
   EVAL(liste({1, 2, 3}));
     cout << "\n=================================================================\n ";
+  EVAL(li({2, 4, 4, 5, 9}));
+  EVAL(longLi(exli));
+  EVAL(longLi({3, 3, 3, 5, 1, 1, 1, 1, 1, 1, 4}));
+  EVAL(minLi(exli));
+  EVAL(minLi({2,1}));
+  EVAL(minLi({3, 4, 5, 2, 1}));
+  EVAL(minLi({3, 5, 4, 7, 94}));
+  EVAL(minLi({}));
+  EVAL(existeLi(exli, 4));
+  EVAL(existeLi(exli, 1));
+  EVAL(oterLi(exli, 1));
+  EVAL(oterLi(exli, 67));
+  EVAL(oterLi(exli, 9));
+  EVAL(estTriee(exli));
+  EVAL(estTriee({1, 2, 4}));
+  EVAL(estTriee({3, 4, 6, 7, 9, 100}));
+  EVAL(estTriee({3, 4, 6, 7, 9, 100, 1}));
+  //EVAL(triListe(exli));
+  EVAL(lgPrefEg(exli));
+  EVAL(lgPrefEg({2, 2, 2, 2, 4, 5}));
+  EVAL(lgPrefEg({2, 7, 7, 2}));
+  EVAL(lgPrefEg({2, 2, 2, 7, 2}));
+  EVAL(existeRepet(exli));
+  EVAL(existeRepet({1, 4, 5, 2}));
   
-
-
-
 
 
 
