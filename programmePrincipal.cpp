@@ -13,7 +13,7 @@ int main()
   // Expressions à évaluer
   // cout << "\n==== Prise en main =======\n";
   // commande pour évaluer l'expression 3+4
-  EVAL( 3+4 );
+  /*EVAL( 3+4 );
   EVAL( true || false );
   EVAL( abs(2) );
   //EVAL (2/(1-1));
@@ -110,9 +110,46 @@ int main()
   EVAL(lgPrefEg({2, 2, 2, 2, 4, 5}));
   EVAL(lgPrefEg({2, 7, 7, 2}));
   EVAL(lgPrefEg({2, 2, 2, 7, 2}));
-  EVAL(existeRepet(exli));
-  EVAL(existeRepet({1, 4, 5, 2}));
-  
+  EVAL(suppRepet({2, 7, 7, 7, 2}));
+  EVAL(suppPrefEg({2, 7, 7, 2}));
+  EVAL(codeLi({7, 7, 7, 7, 8, 8, 7, 7, 7}));
+  EVAL(decodeLi({3, 7, 2, 1, 1, 2}));*/
+  //somCarre();
+  //sommeNpremiers();
+  //somme2n();
+  //somfrac();
+  //sommeDiv();
+  //factorielle();
+  //puissance();
+  //tantQueSomme2();
+  //tantQueSommeFrac();
+  //floorPositif();
+  //ceilPositif();
+  //estPremier();
+  //niemeMultiple();
+  //mystere();
+  //nbRacinesEtSoultionsReelles();
+  //sommeNpremiersV2();
+  //sommePair();
+  //sommeImpair();
+  //sommeDivV2();
+  //sommeDivV3();
+  existeParfait();
+  //EVAL((float) rand()/ RAND_MAX);
+  //EVAL((float) rand()/ RAND_MAX);
+  //EVAL((float) rand()/ RAND_MAX);
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -13,5 +13,8 @@ programmePrincipal.o : programmePrincipal.cpp definitionsFonctions.cpp
 listesEtTableaux.o : listesEtTableaux.cpp
 	${CC} ${CFLAGS}  listesEtTableaux.cpp
 
+partie2tp.o : TP2.cpp
+	${CC} ${CFLAGS}  TP2.cpp
+
 clean :
 	\rm *.o in101
