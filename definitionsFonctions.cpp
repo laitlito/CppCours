@@ -514,12 +514,9 @@ void sommeImpair()
 }
 //Exercice 3
 // a)
-void sommeDivV2()
+int sommeDivV2(int n)
 {
-	int n;
 	int som=0;
-	cout << "Entrez un nombre" << endl;
-	cin >> n;
 	for (int i=1; i<=n ; i++)
 	{
 		if (n%i==0)
@@ -528,17 +525,13 @@ void sommeDivV2()
 		}
 	}
 	{
-		cout << "La somme des diviseurs de " << n << " est " << som;
+		return som;
 	}
 }
 // b)
-void sommeDivV3()
+bool estParf(int n)
 {
-	int n;
 	int som=0;
-	bool estParf=false;
-	cout << "Entrez un nombre" << endl;
-	cin >> n;
 	for (int i=1; i<=n ; i++)
 	{
 		if (n%i==0)
@@ -548,76 +541,423 @@ void sommeDivV3()
 	}
 	if (som==2*n)
 	{
-		estParf=true;
-	}
-	{
-		cout << n << " est-il un nombre parfait ? " << estParf;
-	}
-}
-// c)
-/*void existeParfait()
-{
-	int a;
-	int b;
-	int som=0;
-	bool estParf=false;
-	bool existeParfait=false;
-	cout << "Entrez un nombre a" << endl;
-	cout << "Entrez un nombre b" << endl;
-	cin >> a;
-	cin >> b;
-	if (b<a)
-	{
-		existeParfait=false;
+		return true;
 	}
 	else
 	{
-		for (int i=a; a<=b ; i++)
+		return false;
+	}
+}
+// c)
+bool existeParfait(int a, int b)
+{
+	bool existeParfait=false;
+	for (int i = a; i < b; i++)
+	{
+		if (estParf(i)==true)
 		{
-			if (b%i==0)
+			existeParfait=true;
+			return existeParfait;
+		}
+	}return 0;
+}
+
+bool existeParfait2(int a, int b)
+{
+	int i=a;
+	while (i<=b)
+	{
+		estParf(i);
+		if (estParf(i)==true)
+		 {
+			return true;
+		 }
+		i++;
+	}return 0;
+}
+
+
+int parfaitSuiv(int a)
+{
+	int i=a;
+	while (estParf(i)==false)
+	{
+		i++;
+		cout << i;
+	} return i;
+}
+
+int nemeParfait(int n)
+{
+	int i=0;
+	int nbr=0;
+	while(nbr<n)
+	{
+		if (estParf(i))
+		{
+			nbr=nbr+1;
+		}
+		i=i+1;
+	}
+	return(i-1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+bool sontAmis(int a, int b)
+{
+	bool sontAmis=false;
+	if (sommeDivV2(a)==sommeDivV2(b))
+	{
+		sontAmis = true;
+	}
+	return sontAmis;
+}
+
+
+bool aUnAmi(int n)
+{
+	int k=sommeDivV2(n)-n;
+	return(sommeDivV2(k)==n+k);
+}
+
+
+
+/*void liCouples1()
+{
+	int n;
+	int j=0;
+	list<int>()=li;
+	cout << "Entrez un entier n" << endl;
+	cin >> n;
+	for (int i=0; i<=n; i++)
+	{
+		if ((i+j)==n)
+		{
+			cons(i, li);
+			cons(j, li);
+		}
+	} cout << li;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+void dansCercle()
+{
+	float x;
+	float y;
+	bool dansCercle = false;
+	cout << "Entrez un nombre x compris entre 0 et 1 : " << endl;
+	cout << "Entrez un nombre y compris entre 0 et 1 : " << endl;
+	cin >> x;
+	cin >> y;
+	if (pow(x, 2)+pow(y, 2)<=1)
+	{
+		dansCercle=true;
+	} cout << "Le point de coordonnées x=" << x << " ; y=" << y <<" est-il dans le cercle ? " << dansCercle;
+}
+
+//Exercice 3
+void monteCarlo()
+{
+	int nTir;
+	int nInt=0;
+	float pi;
+	cout <<"Entrez le nombre de tir" << endl;
+	cin >>nTir;
+	for (int i = 0; i < nTir; i++)
+	{
+		float x=(float) rand()/ RAND_MAX;
+		float y=(float) rand()/ RAND_MAX;
+		if (pow(x, 2)+pow(y, 2)<=1)
+		{
+			nInt=nInt+1;
+		}
+		else
+		{
+			nInt=nInt;
+		}
+	} pi= 4 * (float) nInt / nTir;
+	cout << "Pi est environ égal à " << pi;
+}
+//////////////////////////////////////////////////
+int somTab(vector<int> T)
+{
+	int som=0;
+	for (int i=0 ; i<=(taille(T)-1) ; i++)
+	{
+		som=som+T.at(i);
+	}
+	return som;
+}
+/////////////////////////////////////////////////
+bool tabEgaux(vector<int> T1, vector<int> T2)
+{
+	bool sontEgaux=true;
+	if (taille(T1)!=taille(T2))
+	{
+		sontEgaux=false;
+	}
+	else
+	{
+		for (int i=0 ; i<=(taille(T1)-1) ; i++)
+		{
+			if(T1.at(i)==T2.at(i))
 			{
-				som=som+i;
+				sontEgaux=true;
+			}
+			else
+			{
+				sontEgaux=false;
 			}
 		}
-		if (som==2*b)
-		{
-			estParf=true;
-			existeParfait=true;
-		}
-		{
-			cout << estParf;
-			cout << existeParfait;
-		}
-	}
-}*/
-
-
-
-/*void existeParfait()
+	} return(sontEgaux);
+}
+////////////////////////////////////////////
+vector<int> tabCarre(int n)
 {
-	int a;
-	int b;
-	int som=0;
-	bool estParf=false;
-	bool existeParfait=false;
-	cout << "Entrez un nombre a " << endl;
-	cout << "Entrez un nombre b " << endl;
-	cin >> a;
-	cin >> b;
-	for (int i=a; i<=b; i++)
+	vector<int> ta(n);
+	for( int i=0 ; i<=n-1 ; i++)
 	{
-		if (b%i==0)
+		ta.at(i)=i*i;
+	}
+	return(ta);
+}
+//////////////////////////////////////////
+vector<int> tabSuite(int n)
+{
+	vector<int> ta(n);
+	ta.at(0)=0;
+	for(int i=1; i<=n-1; i++)
+	{
+		ta.at(i)=ta.at(i-1)+2*(i-1)+1;
+	}
+	return(ta);
+}
+////////////////////////////////////////////
+int racEnt(int n)
+{
+	int i=0;
+	vector<int> ta=tabCarre(100);
+	int racEnt;
+	while(i*i<=n)
+	{
+		i++;
+	}
+	racEnt=i-1;
+	return(racEnt);
+}
+//////////////////////////////////////////
+int nbMaxLoc(vector<int> ta)
+{
+	int nbMaxLoc=0;
+	for(int i=1; i<=taille(ta)-1; i++)
+	{
+		if(ta.at(i-1)<ta.at(i) && ta.at(i)<ta.at(i+1))
+		nbMaxLoc=nbMaxLoc+1;
+	}
+	return(nbMaxLoc);
+}
+///////////////////////////////////////
+int degree(vector<int> ta)
+{
+	int degree;
+	for(int i=0; i<=taille(ta)-1;i++)
+	{
+		if(ta.at(i)!=0)
 		{
-			som=som+i;
+			degree=i;
 		}
 	}
-	if (som==2*b)
+	return(degree);
+}
+
+int valPoly(vector<int> ta, int n)
+{
+	int v=0;
+	for(int i=0; i<=taille(ta)-1;i++)
 	{
-		estParf=true;
-		existeParfait=true;
+		v=v+ta.at(i)*pow(n, i);
 	}
+	return(v);
+}
+
+/*vector<int> somPoly(vector<int> ta1, vector<int> ta2)
+{
+	vector<int> ta;
+	if(taille(ta1)<=taille(ta2))
 	{
-		cout << estParf;
-		cout << existeParfait;
+		for(int i=0; i<=taille(ta1))
+		{
+			ta.at(i)=ta1.at(i)+ta2.at(i);
+		}
+		for(int i=0; i<=taille(ta2)
+		{
+			ta.at(i)=ta.at(i)+ta2.at(i);
+		}
+		return(ta);
+	}
+	if(taille(ta1)>taille(ta2))
+	{
+		for(int i=0; i<=taille(ta2))
+		{
+			ta.at(i)=ta1.at(i)+ta2.at(i);
+		}
+		for(int i=0; i<=taille(ta1))
+		{
+			ta.at(i)=ta.at(i)+ta1.at(i);
+		}
+		return(ta);
 	}
 }*/
+
+int difMin(vector<int> ta)
+{
+	int dm;
+	dm=abs(ta.at(0)-ta.at(1));
+	for(int i=0; i<= taille(ta)-1; i++)
+	{
+		for(int j=i+1; j<taille(ta); j++)
+		{
+			if(abs(ta.at(i)-ta.at(j))<dm)
+			{
+				dm=abs(ta.at((i)-ta.at(j)));
+			}
+		}
+	}
+	return(dm);
+}
+
+bool estEquilibre(int n)
+{
+	bool estEquilibre=false;
+	int divPair=0;
+	int divImpair=0;
+	for (int i=1; i<=n; i++)
+	{
+		if(n%i==0)
+		{
+			if(i%2==0)
+			{
+				divPair=divPair+1;
+			}
+			if(i%2==1)
+			{
+				divImpair=divImpair+1;
+			}
+		}
+	}
+	if(divPair==divImpair)
+	{
+		estEquilibre=true;
+	}
+	return(estEquilibre);
+}
+
+list<int> liEquiInfV1(int n)
+{
+	return(n==0 || n==1 ? liVide<int>() : estEquilibre(n)? cons(n, liEquiInfV1(n-1)) : liEquiInfV1(n-1));
+}
+
+list<int> liEquiInfV2(int n)
+{
+	list<int> li;
+	for(int i=1; i<=n; i++)
+	{
+		if(estEquilibre(i))
+		{
+			li=cons(i, li);
+		}
+	}
+	return(li);
+}
+
+list<int> liPremEqui(int n)
+{
+	list<int> li;
+	int cpt=0;
+	int i=1;
+	while(cpt<n)
+	{
+		if(estEquilibre(i))
+		{
+			li=cons(i, li);
+			cpt=cpt+1;
+		}
+	i++;
+	}
+	return(li);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+void integrale()
+{
+	float a;
+	float b;
+	int fonction;
+	float var=0;
+	cout << "Entrez la borne inférieure " << endl;
+	cin >> a;
+	cout << "Entrez la borne inférieure " << endl;
+	cin >> b;
+	cout << "Entrez la fonction dont vous voulez connaitre l'intégrale, 0: f(x)=1, 1: f(x)=x " << endl;
+	cin >> fonction;
+	if (fonction==0)
+	{
+		var=b-a;
+		cout << var;
+	}
+	if (fonction==1)
+	{
+		var=pow(b, 2)/2-pow(a, 2)/2;
+		cout << var;
+	}
+	if (fonction==2)
+	{
+		var=pow(b, 3)/3-pow(a, 3)/3;
+		cout << var;
+	}
+	if (fonction==3)
+	{
+		var=pow(b, 4)/4-pow(a, 4)/4;
+		cout << var;
+	}
+	if (fonction==4)
+	{
+		var=pow(b, 5)/5-pow(a, 5)/5;
+		cout << var;
+	}
+}

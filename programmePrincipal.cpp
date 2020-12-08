@@ -2,7 +2,6 @@
 #include "definitionsFonctions.cpp"
 #define EVAL(exp) cout << "Valeur de " << (#exp) <<" : "<< (exp) << endl
 
-
 int main()
 {
   srand(time(NULL));
@@ -133,21 +132,62 @@ int main()
   //sommePair();
   //sommeImpair();
   //sommeDivV2();
-  //sommeDivV3();
-  existeParfait();
+  //EVAL(estParf(6));
+  //EVAL(existeParfait(10, 200000000));
+  //EVAL(existeParfait2(10, 200000000));
   //EVAL((float) rand()/ RAND_MAX);
   //EVAL((float) rand()/ RAND_MAX);
   //EVAL((float) rand()/ RAND_MAX);
-
-
-
-
-
-
-
-
-
-
+  //dansCercle();
+  //monteCarlo();
+  //EVAL(parfaitSuiv(8129));
+  //integrale();
+  //EVAL(sontAmis(220, 284));
+  //EVAL(aUnAmi(220));
+  //EVAL(nemeParfait(2));
+  vector<int> ta (3); ta.at(0) = 1; ta.at(1) = 2; ta.at(2) = 6;
+  //EVAL(ta);
+  //EVAL(ta.at(0));
+  //EVAL(taille(ta));
+  //EVAL(ta.at(2));
+  //EVAL( tableau({4,2,7}) );
+  EVAL(somTab({ta}));
+  EVAL(somTab({3,1,7,2,1}));
+  EVAL(tabEgaux(ta, tableau({1,2,3})));
+  EVAL(tabEgaux(ta, tableau({1,10, 9})));
+  EVAL(tabEgaux(ta, tableau({1,10})));
+  EVAL(tabEgaux(ta, tableau({1, 2, 6})));
+  EVAL(tabCarre(4));
+  EVAL(tabSuite(6));
+  EVAL(tabEgaux(tabCarre(8), tabSuite(8)));
+  EVAL(racEnt(25));
+  EVAL(racEnt(27));
+  //EVAL(nbMaxLoc(ta));
+  vector<int> poly1 = tableau( {3,0,2,0,1,0});
+  vector<int> poly2 = tableau( {0,1,2,3,-1});
+  ecrPoly(poly1);
+  ecrPoly(poly2);
+  EVAL(degree(poly1));
+  EVAL(degree(poly2));
+  ecrPoly(tableau({1, 5, 3, 2, 5, 5, 3, 0, 2, 9}));
+  EVAL(degree(tableau({1, 5, 3, 2, 5, 5, 3, 0, 2, 9})));
+  EVAL(valPoly(poly1, 1));
+  EVAL(valPoly(poly2, 2));
+  //EVAL(difMin(ta));
+  EVAL(estEquilibre(6));
+  EVAL(estEquilibre(2));
+  EVAL(estEquilibre(14));
+  EVAL(estEquilibre(30));
+  EVAL(estEquilibre(4));
+  EVAL(estEquilibre(9));
+  EVAL(estEquilibre(20));
+  EVAL(liEquiInfV2(6));
+  EVAL(liEquiInfV2(16));
+  EVAL(liEquiInfV2(1));
+  EVAL(liEquiInfV1(6));
+  EVAL(liEquiInfV1(16));
+  EVAL(liEquiInfV1(1));
+  EVAL(liPremEqui(5));
 
 
 
