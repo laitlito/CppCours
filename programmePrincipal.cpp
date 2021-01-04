@@ -9,13 +9,9 @@ int main()
 
   cout << "\n=================================================================\n ";
 
-  // Expressions à évaluer
-  // cout << "\n==== Prise en main =======\n";
-  // commande pour évaluer l'expression 3+4
-  /*EVAL( 3+4 );
+  EVAL( 3+4 );
   EVAL( true || false );
   EVAL( abs(2) );
-  //EVAL (2/(1-1));
   EVAL( 8/2 );
   EVAL( 9/2 );
   EVAL( 8%4 );
@@ -31,7 +27,6 @@ int main()
   EVAL( !( 2 > 3) );
   EVAL(( 2 > 3 ) && true);
   EVAL(( 2 > 3 ) || true);
-  //EVAL( ((2/0)>1) || true);
   EVAL(true || ((2/0)>1));
   EVAL(2>3 ? 5 : 7);
   EVAL(sqrt(2)>1.4 ? 5 : 7);
@@ -68,7 +63,6 @@ int main()
   EVAL(racNum(1345));
   EVAL(racNum(13714728));
   EVAL(invChif(1135784));
-  //EVAL(existeRac(16, 2));
   EVAL(estCarre(64));
   EVAL(estCarre(132));
   cout << "\n=================================================================\n ";
@@ -77,11 +71,9 @@ int main()
   EVAL(tete(exli));
   EVAL(queue(exli));
   EVAL(tete(queue(exli)));
-  //EVAL(tete(tete(exli));
   EVAL(queue(queue(exli)));
   EVAL(cons(11,liVide<int>()));
   EVAL(cons(11, exli));
-  //EVAL(cons(1.1, exli));
   EVAL((tete(exli)+tete(queue(exli))));
   EVAL(cons(34, queue(queue(exli))));
   EVAL(cons(tete(exli), queue(queue(exli))));
@@ -104,7 +96,6 @@ int main()
   EVAL(estTriee({1, 2, 4}));
   EVAL(estTriee({3, 4, 6, 7, 9, 100}));
   EVAL(estTriee({3, 4, 6, 7, 9, 100, 1}));
-  //EVAL(triListe(exli));
   EVAL(lgPrefEg(exli));
   EVAL(lgPrefEg({2, 2, 2, 2, 4, 5}));
   EVAL(lgPrefEg({2, 7, 7, 2}));
@@ -113,44 +104,44 @@ int main()
   EVAL(suppPrefEg({2, 7, 7, 2}));
   EVAL(codeLi({7, 7, 7, 7, 8, 8, 7, 7, 7}));
   EVAL(decodeLi({3, 7, 2, 1, 1, 2}));*/
-  //somCarre();
-  //sommeNpremiers();
-  //somme2n();
-  //somfrac();
-  //sommeDiv();
-  //factorielle();
-  //puissance();
-  //tantQueSomme2();
-  //tantQueSommeFrac();
-  //floorPositif();
-  //ceilPositif();
-  //estPremier();
-  //niemeMultiple();
-  //mystere();
-  //nbRacinesEtSoultionsReelles();
-  //sommeNpremiersV2();
-  //sommePair();
-  //sommeImpair();
-  //sommeDivV2();
-  //EVAL(estParf(6));
-  //EVAL(existeParfait(10, 200000000));
-  //EVAL(existeParfait2(10, 200000000));
-  //EVAL((float) rand()/ RAND_MAX);
-  //EVAL((float) rand()/ RAND_MAX);
-  //EVAL((float) rand()/ RAND_MAX);
-  //dansCercle();
-  //monteCarlo();
-  //EVAL(parfaitSuiv(8129));
-  //integrale();
-  //EVAL(sontAmis(220, 284));
-  //EVAL(aUnAmi(220));
-  //EVAL(nemeParfait(2));
+  somCarre();
+  sommeNpremiers();
+  somme2n();
+  somfrac();
+  sommeDiv();
+  factorielle();
+  puissance();
+  tantQueSomme2();
+  tantQueSommeFrac();
+  floorPositif();
+  ceilPositif();
+  estPremier();
+  niemeMultiple();
+  mystere();
+  nbRacinesEtSoultionsReelles();
+  sommeNpremiersV2();
+  sommePair();
+  sommeImpair();
+  sommeDivV2();
+  EVAL(estParf(6));
+  EVAL(existeParfait(10, 200000000));
+  EVAL(existeParfait2(10, 200000000));
+  EVAL((float) rand()/ RAND_MAX);
+  EVAL((float) rand()/ RAND_MAX);
+  EVAL((float) rand()/ RAND_MAX);
+  dansCercle();
+  monteCarlo();
+  EVAL(parfaitSuiv(8129));
+  integrale();
+  EVAL(sontAmis(220, 284));
+  EVAL(aUnAmi(220));
+  EVAL(nemeParfait(2));
   vector<int> ta (3); ta.at(0) = 1; ta.at(1) = 2; ta.at(2) = 6;
-  //EVAL(ta);
-  //EVAL(ta.at(0));
-  //EVAL(taille(ta));
-  //EVAL(ta.at(2));
-  //EVAL( tableau({4,2,7}) );
+  EVAL(ta);
+  EVAL(ta.at(0));
+  EVAL(taille(ta));
+  EVAL(ta.at(2));
+  EVAL( tableau({4,2,7}) );
   EVAL(somTab({ta}));
   EVAL(somTab({3,1,7,2,1}));
   EVAL(tabEgaux(ta, tableau({1,2,3})));
@@ -162,7 +153,7 @@ int main()
   EVAL(tabEgaux(tabCarre(8), tabSuite(8)));
   EVAL(racEnt(25));
   EVAL(racEnt(27));
-  //EVAL(nbMaxLoc(ta));
+  EVAL(nbMaxLoc(ta));
   vector<int> poly1 = tableau( {3,0,2,0,1,0});
   vector<int> poly2 = tableau( {0,1,2,3,-1});
   ecrPoly(poly1);
@@ -173,7 +164,7 @@ int main()
   EVAL(degree(tableau({1, 5, 3, 2, 5, 5, 3, 0, 2, 9})));
   EVAL(valPoly(poly1, 1));
   EVAL(valPoly(poly2, 2));
-  //EVAL(difMin(ta));
+  EVAL(difMin(ta));
   EVAL(estEquilibre(6));
   EVAL(estEquilibre(2));
   EVAL(estEquilibre(14));
@@ -188,11 +179,27 @@ int main()
   EVAL(liEquiInfV1(16));
   EVAL(liEquiInfV1(1));
   EVAL(liPremEqui(5));
-
-
-
-
-
+  abs();
+  EVAL(memeChiffre(13743));
+  EVAL(estEquilibre2(2));
+  EVAL(estEquilibre2(14));
+  EVAL(estEquilibre2(30));
+  EVAL(estEquilibre2(9));
+  EVAL(liEquiInf3(6));
+  EVAL(liEquiInf3(16));
+  EVAL(liEquiInf4(6));
+  EVAL(liEquiInf4(16));
+  EVAL(liPremEqui2(2));
+  EVAL(liPremEqui2(5));
+  EVAL(contientEqui({12, 13, 6, 22, 8, 2, 11}));
+  EVAL(contientEqui2({12, 13, 6, 22, 8, 2, 11}));
+  EVAL(nbEqui({12, 13, 6, 22, 8, 2, 22}));
+  EVAL(sousTabEqui({12, 13, 6, 22, 8, 2, 22}));
+  EVAL(premierChiffre(57493));
+  EVAL(moyennePresente({5, 6, 8, 4, 7}));
+  EVAL(moyennePresente({1, 8, 10, 6, 2, 3}));
+  EVAL(valMax({12, 13, 6, 22, 8, 2, 12}));
+  EVAL(maxLiUnique({3, 7, 9, 2, 2, 7}));
   cout << "\n=================================================================\n ";
   return 0;
 }

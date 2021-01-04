@@ -1,5 +1,3 @@
-	// Fichier dans lequel vous écrirez les fonctions que l'on vous demandera de définir
-
 #include "listesEtTableaux.cpp"
 #include <iostream>
 #include <cmath>
@@ -10,38 +8,30 @@ float moyenne(float a, float b)
 	return (a+b)/2 ;
 }
 
-
 float max3(float a, float b, float c)
 {
 	return (a>b && b>c ? a : (b>a && a>c ? b : c)) ;
 }
-
-
 
 bool multiple(int a, int b)
 {
 	return ((b == 0) ? false : (a%b == 0 ? true : false));
 }
 
-
-
 bool triangleEqui(float a, float b, float c)
 {
 	return ((a == b)&&(b == c) ? true : false);
 }
-
 
 bool triangleIso(float a, float b, float c)
 {
 	return ((a == b)||(b == c) ? true : false);
 }
 
-
 bool triangle(float a, float b, float c)
 {
 	return((a > b+c) ? false : true);
 }
-
 
 bool memeParite(int a, int b)
 {
@@ -113,13 +103,6 @@ bool estCarre(int n)
 	return(floor(sqrt(n))==sqrt(n) ? true : false);
 }
 
-//============================================================================================================================================================
-//============================================================================================================================================================
-//============================================================================================================================================================
-//============================================================================================================================================================
-//============================================================================================================================================================
-//============================================================================================================================================================
-
 list<int> li(list<int> li)
 {
 	return((li));
@@ -180,13 +163,6 @@ list<int> decodeLi(list<int> li)
 	return(estVide(li)? li : tete(li)==1 ? cons(tete(queue(li)), decodeLi(queue(queue(li)))) : cons(tete(queue(li)), decodeLi(cons(tete(li)-1, queue(li)))));
 }
 
-//============================================================================================================================================================
-//============================================================================================================================================================
-//============================================================================================================================================================
-//============================================================================================================================================================
-//============================================================================================================================================================
-//============================================================================================================================================================
-// Exercice 0
 void sommeNpremiers()
 {
 	int n;
@@ -201,8 +177,7 @@ void sommeNpremiers()
     cout <<x;
   }
 }
-//============================================================================================================================================================
-//Exercice 2
+
 void somme2n()
 {
 	int n;
@@ -217,24 +192,7 @@ void somme2n()
 		cout << x;
 	}
 }
-//============================================================================================================================================================
-//Exercice 3
-/*void somfrac()
-{
-	int n;
-	float x=0;
-	cout << "Entrez un nombre: " << endl;
-	cin >> n;
-	for (int k = 1; k <= n/(n+1); k++)
-	{
-		x=x+k/k+1;
-	}
-	{
-		cout << x;
-	}
-}*/
-//============================================================================================================================================================
-//Exercice 5
+
 void sommeDiv()
 {
 	int n;
@@ -252,8 +210,7 @@ void sommeDiv()
 		cout << x;
 	}
 }
-//============================================================================================================================================================
-//Exercice 6
+
 void factorielle()
 {
 	int n;
@@ -268,24 +225,7 @@ void factorielle()
 		cout << x;
 	}
 }
-//============================================================================================================================================================
-//Exercice 7
-/*void puissance ()
-{
-	int n;
-	int x=1;
-	cout << "Entrez un nombre" << endl;
-	cin >> n;
-	for (int k=1; k<=n ; k++)
-	{
-		x=x*n;
-	}
-	{
-		cout << x;
-	}
-}*/
-//============================================================================================================================================================
-//Exercice 9 Tant que
+
 void tantQueSomme2 ()
 {
 	int n;
@@ -302,26 +242,7 @@ void tantQueSomme2 ()
 		cout << x;
 	}
 }
-//============================================================================================================================================================
-//Exercice 9 Tant queu
-/*void tantQueSommeFrac()
-{
-	int n;
-	int x=0;
-	int k=1;
-	cout <<"Entrez un nombre" << endl;
-	cin >> n;
-	while (k<=n)
-	{
-		x=x+k/(k+1);
-		k++;
-	}
-	{
-		cout << x;
-	}
-}*/
-//============================================================================================================================================================
-//Exercice 10
+
 void floorPositif()
 {
 	int x;
@@ -336,7 +257,7 @@ void floorPositif()
 		cout << n;
 	}
 }
-//Exercice 11
+
 void ceilPositif()
 {
 	int x;
@@ -351,8 +272,7 @@ void ceilPositif()
 		cout << n+1;
 	}
 }
-//============================================================================================================================================================
-//Exercice 12
+
 void estPremier()
 {
 	int n;
@@ -370,8 +290,7 @@ void estPremier()
 		cout << !(trouveDiv);
 	}
 }
-//============================================================================================================================================================
-//Exercice 13
+
 void niemeMultiple()
 {
     int n;
@@ -393,15 +312,7 @@ void niemeMultiple()
         }
     }  cout<<x;
 }
-//============================================================================================================================================================
-//============================================================================================================================================================
-//============================================================================================================================================================
-//============================================================================================================================================================
-//============================================================================================================================================================
-//============================================================================================================================================================
-//TP Numéro 2
-// I.
-//Exercice 1
+
 void mystere()
 {
 	int n;
@@ -416,8 +327,7 @@ void mystere()
 		cout << "Le resultat est " <<v;
 	}
 }
-//============================================================================================================================================================
-//Exercice 2&3
+
 void nbRacinesEtSoultionsReelles()
 {
 	float a;
@@ -468,9 +378,7 @@ void nbRacinesEtSoultionsReelles()
 		}
 	} cout << "Le nombre de solutions est " << nbr << " et les solutuions sont "<< li;
 }
-//============================================================================================================================================================
-// II.
-//Exercice 0
+
 void sommeNpremiersV2()
 {
 	int n;
@@ -482,7 +390,7 @@ void sommeNpremiersV2()
 		som=som+i;
 	} cout << "La somme des " <<n<< " premiers entiers est " <<som;
 }
-//Exercice 1
+
 void sommePair()
 {
 	int n;
@@ -497,7 +405,7 @@ void sommePair()
 		cout << "La somme des " <<n<< " premiers entiers pairs est " << som;
 	}
 }
-//Exercice 2
+
 void sommeImpair()
 {
 	int n;
@@ -512,8 +420,7 @@ void sommeImpair()
 		cout << "La somme des " << n << " premiers entiers impairs est " << som;
 	}
 }
-//Exercice 3
-// a)
+
 int sommeDivV2(int n)
 {
 	int som=0;
@@ -528,7 +435,7 @@ int sommeDivV2(int n)
 		return som;
 	}
 }
-// b)
+
 bool estParf(int n)
 {
 	int som=0;
@@ -548,7 +455,7 @@ bool estParf(int n)
 		return false;
 	}
 }
-// c)
+
 bool existeParfait(int a, int b)
 {
 	bool existeParfait=false;
@@ -602,17 +509,6 @@ int nemeParfait(int n)
 	return(i-1);
 }
 
-
-
-
-
-
-
-
-
-
-
-
 bool sontAmis(int a, int b)
 {
 	bool sontAmis=false;
@@ -623,43 +519,11 @@ bool sontAmis(int a, int b)
 	return sontAmis;
 }
 
-
 bool aUnAmi(int n)
 {
 	int k=sommeDivV2(n)-n;
 	return(sommeDivV2(k)==n+k);
 }
-
-
-
-/*void liCouples1()
-{
-	int n;
-	int j=0;
-	list<int>()=li;
-	cout << "Entrez un entier n" << endl;
-	cin >> n;
-	for (int i=0; i<=n; i++)
-	{
-		if ((i+j)==n)
-		{
-			cons(i, li);
-			cons(j, li);
-		}
-	} cout << li;
-}*/
-
-
-
-
-
-
-
-
-
-
-
-
 
 void dansCercle()
 {
@@ -676,7 +540,6 @@ void dansCercle()
 	} cout << "Le point de coordonnées x=" << x << " ; y=" << y <<" est-il dans le cercle ? " << dansCercle;
 }
 
-//Exercice 3
 void monteCarlo()
 {
 	int nTir;
@@ -699,7 +562,7 @@ void monteCarlo()
 	} pi= 4 * (float) nInt / nTir;
 	cout << "Pi est environ égal à " << pi;
 }
-//////////////////////////////////////////////////
+
 int somTab(vector<int> T)
 {
 	int som=0;
@@ -709,7 +572,7 @@ int somTab(vector<int> T)
 	}
 	return som;
 }
-/////////////////////////////////////////////////
+
 bool tabEgaux(vector<int> T1, vector<int> T2)
 {
 	bool sontEgaux=true;
@@ -732,7 +595,7 @@ bool tabEgaux(vector<int> T1, vector<int> T2)
 		}
 	} return(sontEgaux);
 }
-////////////////////////////////////////////
+
 vector<int> tabCarre(int n)
 {
 	vector<int> ta(n);
@@ -742,7 +605,7 @@ vector<int> tabCarre(int n)
 	}
 	return(ta);
 }
-//////////////////////////////////////////
+
 vector<int> tabSuite(int n)
 {
 	vector<int> ta(n);
@@ -753,7 +616,7 @@ vector<int> tabSuite(int n)
 	}
 	return(ta);
 }
-////////////////////////////////////////////
+
 int racEnt(int n)
 {
 	int i=0;
@@ -766,7 +629,7 @@ int racEnt(int n)
 	racEnt=i-1;
 	return(racEnt);
 }
-//////////////////////////////////////////
+
 int nbMaxLoc(vector<int> ta)
 {
 	int nbMaxLoc=0;
@@ -777,7 +640,7 @@ int nbMaxLoc(vector<int> ta)
 	}
 	return(nbMaxLoc);
 }
-///////////////////////////////////////
+
 int degree(vector<int> ta)
 {
 	int degree;
@@ -800,35 +663,6 @@ int valPoly(vector<int> ta, int n)
 	}
 	return(v);
 }
-
-/*vector<int> somPoly(vector<int> ta1, vector<int> ta2)
-{
-	vector<int> ta;
-	if(taille(ta1)<=taille(ta2))
-	{
-		for(int i=0; i<=taille(ta1))
-		{
-			ta.at(i)=ta1.at(i)+ta2.at(i);
-		}
-		for(int i=0; i<=taille(ta2)
-		{
-			ta.at(i)=ta.at(i)+ta2.at(i);
-		}
-		return(ta);
-	}
-	if(taille(ta1)>taille(ta2))
-	{
-		for(int i=0; i<=taille(ta2))
-		{
-			ta.at(i)=ta1.at(i)+ta2.at(i);
-		}
-		for(int i=0; i<=taille(ta1))
-		{
-			ta.at(i)=ta.at(i)+ta1.at(i);
-		}
-		return(ta);
-	}
-}*/
 
 int difMin(vector<int> ta)
 {
@@ -908,20 +742,21 @@ list<int> liPremEqui(int n)
 	return(li);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+void abs()
+{
+	int a;
+	cout <<"Entrez un nombre" << endl;
+	cin >> a;
+	if(a>0)
+	{
+		cout << a;
+	}
+	else
+	{
+		a=a*-1;
+		cout << a;
+	}
+}
 
 void integrale()
 {
@@ -960,4 +795,188 @@ void integrale()
 		var=pow(b, 5)/5-pow(a, 5)/5;
 		cout << var;
 	}
+}
+
+bool memeChiffre(int n)
+{
+	return(n<10 ? true : ((n%10) == (n/10)%10) ? memeChiffre(n/10) : false);
+}
+
+bool estEquilibre2(int n)
+{
+	bool estEquilibre=false;
+	int divPair=0;
+	int divImpair=0;
+	for(int i=1; i<=n; i++)
+	{
+		if(n%i==0)
+		{
+			if(i%2==0)
+			{
+				divPair=divPair+1;
+			}
+			if(i%2==1)
+			{
+				divImpair=divImpair+1;
+			}
+		}
+	}
+	if(divImpair==divPair)
+	{
+		estEquilibre=true;
+	}
+	return(estEquilibre);
+}
+
+list<int> liEquiInf3(int n)
+{
+	list<int> li;
+	for(int i=1; i<=n; i++)
+	{
+		if(estEquilibre2(i))
+		{
+			li=cons(i, li);
+		}
+	}
+	return(li);
+}
+
+list<int> liEquiInf4(int n)
+{
+	return(n==0 || n==1 ? liVide<int>() : estEquilibre2(n) ? cons(n, liEquiInf4(n-1)) : liEquiInf4(n-1));
+}
+
+list<int> liPremEqui2(int n)
+{
+	list<int> li;
+	int cpt=0;
+	int i=1;
+	while(cpt<n)
+	{
+		if(estEquilibre(i))
+		{
+			li=cons(i, li);
+			cpt=cpt+1;
+		}
+	i++;
+	}
+	return(li);
+}
+
+bool contientEqui(vector<int> ta)
+{
+	bool contientEqui=false;
+	for(int i=1; i<=taille(ta)-1; i++)
+	{
+		if(estEquilibre2(ta.at(i)))
+		{
+			contientEqui=true;
+		}
+	}
+	return(contientEqui);
+}
+
+bool contientEqui2(vector<int> ta)
+{
+	bool contientEqui=false;
+	int i=0;
+	while(i<taille(ta)-1 && !contientEqui)
+	{
+		if(estEquilibre2(ta.at(i)))
+		{
+			contientEqui=true;
+		}
+		i++;
+	}
+	return(contientEqui);
+}
+
+int nbEqui(vector<int> ta)
+{
+	int nbEqui=0;
+	for(int i=0; i<=taille(ta)-1; i++)
+	{
+		if(estEquilibre2(ta.at(i)))
+		{
+			nbEqui=nbEqui+1;
+		}
+	}
+	return(nbEqui);
+}
+
+vector<int> sousTabEqui(vector<int> ta)
+{
+	vector<int> tr(nbEqui(ta));
+	int n=0;
+	for(int i=1; i<=taille(ta)-1; i++)
+	{
+		if(estEquilibre2(ta.at(i)))
+		{
+			tr.at(n)=ta.at(i);
+			n++;
+		}
+	}
+	return(tr);
+}
+
+int premierChiffre(int n)
+{
+	return(n<10? n : premierChiffre(n/10));
+}
+
+bool moyennePresente(vector<int> ta)
+{
+	bool moyennePresente=false;
+	int somTab=0;
+	int moyTab;
+	for(int i=0; i<=taille(ta)-1; i++)
+	{
+		somTab=somTab+ta.at(i);
+	}
+	moyTab=somTab/taille(ta);
+	for(int j=1; j<=taille(ta)-1; j++)
+	{
+		if(ta.at(j)==moyTab)
+		{
+			moyennePresente=true;
+		}
+	}
+	return(moyennePresente);
+}
+
+int valMax (vector<int> ta)
+{
+	int valMax=ta.at(0);
+	for(int i=1; i<=taille(ta)-1; i++)
+	{
+		if(ta.at(i)>valMax)
+		{
+			valMax=ta.at(i);
+		}
+	}
+	return(valMax);
+}
+
+bool maxLiUnique(list<int> li)
+{
+	bool maxLiUnique=true;
+	int max=tete(li);
+	li=queue(li);
+	while(!estVide(li))
+	{
+		if(tete(li)==max)
+		{
+			maxLiUnique=false;
+		}
+		else
+		{
+			if(tete(li)>max)
+			{
+				max=tete(li);
+				maxLiUnique=true;
+			}
+			li=queue(li);
+		}
+	}
+	return(maxLiUnique);
 }
