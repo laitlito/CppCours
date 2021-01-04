@@ -9,7 +9,7 @@ int main()
 
   cout << "\n=================================================================\n ";
 
-  EVAL( 3+4 );
+  /*EVAL( 3+4 );
   EVAL( true || false );
   EVAL( abs(2) );
   EVAL( 8/2 );
@@ -103,16 +103,11 @@ int main()
   EVAL(suppRepet({2, 7, 7, 7, 2}));
   EVAL(suppPrefEg({2, 7, 7, 2}));
   EVAL(codeLi({7, 7, 7, 7, 8, 8, 7, 7, 7}));
-  EVAL(decodeLi({3, 7, 2, 1, 1, 2}));*/
-  somCarre();
+  EVAL(decodeLi({3, 7, 2, 1, 1, 2}));
   sommeNpremiers();
   somme2n();
-  somfrac();
   sommeDiv();
   factorielle();
-  puissance();
-  tantQueSomme2();
-  tantQueSommeFrac();
   floorPositif();
   ceilPositif();
   estPremier();
@@ -122,7 +117,6 @@ int main()
   sommeNpremiersV2();
   sommePair();
   sommeImpair();
-  sommeDivV2();
   EVAL(estParf(6));
   EVAL(existeParfait(10, 200000000));
   EVAL(existeParfait2(10, 200000000));
@@ -199,7 +193,7 @@ int main()
   EVAL(moyennePresente({5, 6, 8, 4, 7}));
   EVAL(moyennePresente({1, 8, 10, 6, 2, 3}));
   EVAL(valMax({12, 13, 6, 22, 8, 2, 12}));
-  EVAL(maxLiUnique({3, 7, 9, 2, 2, 7}));
+  EVAL(maxLiUnique({3, 7, 9, 2, 2, 7}));*/
   cout << "\n=================================================================\n ";
   return 0;
 }
