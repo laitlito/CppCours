@@ -7,12 +7,15 @@ Introduction to C++ courses. The code is a compilation of little exercices to ge
 ```bash
 git clone https://github.com/laitlito/CppCours.git
 ```
+Change directory to the cloned folder
 ```bash
 cd CppCours
 ```
+Compile
 ```bash
 make
 ```
+Execute
 ```bash
 ./in101
 ```
